@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Batumi Off-Plan Apartments with Payment Plans | Petra Group</title>
+<meta name="description" content="Buy an apartment at Petra Group resort developments with an in-house payment plan or a mortgage, on a payment schedule built around your budget.">
+<link rel="alternate" hreflang="ka" href="https://teo373.github.io/petra-installment-landing/">
+<link rel="alternate" hreflang="en" href="https://teo373.github.io/petra-installment-landing/en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600&family=Noto+Serif+Georgian:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#031332;
+  --navy-2:#0a1f47;
+  --cream:#f4f0ed;
+  --sand:#dcc8ba;
+  --sand-soft:#ebe0d7;
+  --gold:#d9aa6e;
+  --gold-dark:#c4925a;
+  --brown:#6b4a14;
+  --white:#fff;
+  --serif:"Noto Serif Georgian", Georgia, serif;
+  --sans:"Noto Sans Georgian", system-ui, sans-serif;
+  --wrap:1240px;
+  --gutter:clamp(16px,6.2vw,89px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+body{font-family:var(--sans);background:var(--cream);color:var(--navy);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+
+/* placeholders to confirm with client */
+.ph{background:rgba(217,170,110,.18);border-bottom:1px dashed var(--gold-dark);padding:0 4px;border-radius:2px;white-space:nowrap}
+.confirm-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--brown);background:rgba(217,170,110,.22);border:1px dashed var(--gold-dark);padding:4px 10px;border-radius:40px;margin-bottom:18px}
+.confirm-tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-dark)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-size:15px;font-weight:500;padding:15px 34px;border-radius:40px;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,transform .25s,box-shadow .25s}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--gold-dark);transform:translateY(-1px);box-shadow:0 10px 24px rgba(3,19,50,.18)}
+.btn-white{background:var(--white);color:#000}
+.btn-white:hover{background:var(--cream)}
+.btn-line{border-color:rgba(255,255,255,.5);color:var(--white)}
+.btn-line:hover{background:rgba(255,255,255,.1)}
+.btn svg{width:16px;height:16px}
+
+/* header */
+/* header: 1:1 with petragroup.ge/ka/petra */
+.header{position:sticky;top:0;z-index:50;background:var(--cream);font-family:var(--sans);font-weight:500;font-size:16px;color:var(--navy)}
+.header-top{padding:0 var(--gutter)}
+.header-inner{position:relative;display:flex;align-items:center;justify-content:space-between;height:144px;border-bottom:1px solid var(--gold)}
+.h-left,.h-right{flex:1;display:flex;align-items:center}
+.h-right{justify-content:flex-end;gap:28px}
+.h-logo{flex:0 1 622px;display:flex;justify-content:center}
+.h-logo img{width:622px;max-width:100%;height:auto}
+.h-drop{position:relative}
+.h-toggle{display:flex;align-items:center;gap:8px;cursor:pointer;padding:10px 0;background:none;border:0;font:inherit;color:inherit}
+.h-toggle .ico-search{display:none;width:23px;height:23px}
+.h-toggle .chev{width:13px;height:9px;transition:transform .25s}
+.h-drop:hover .chev,.h-drop:focus-within .chev{transform:rotate(180deg)}
+.h-list{position:absolute;top:100%;left:0;min-width:220px;background:var(--white);box-shadow:0 14px 34px rgba(3,19,50,.12);padding:8px 0;opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s;z-index:5}
+.h-drop:hover .h-list,.h-drop:focus-within .h-list{opacity:1;visibility:visible;transform:none}
+.h-list a{display:block;padding:10px 20px;white-space:nowrap}
+.h-list a:hover{color:var(--gold-dark);background:var(--cream)}
+.h-lang .h-list{min-width:90px;left:50%;transform:translate(-50%,6px)}
+.h-lang:hover .h-list,.h-lang:focus-within .h-list{transform:translate(-50%,0)}
+.h-star{width:22px;height:21px;color:var(--gold);flex:none}
+.h-callback{display:inline-flex;align-items:center;gap:8px;background:#d9aa6f;color:var(--white);text-transform:uppercase;border-radius:40px;padding:8px 15px 8px 12px;height:40px;white-space:nowrap;transition:background .25s}
+.h-callback:hover{background:var(--gold-dark)}
+.h-callback svg{width:15px;height:15px}
+.h-burger{display:none;width:40px;height:40px;align-items:center;justify-content:center;background:none;border:0;cursor:pointer;color:var(--navy)}
+.h-burger span{display:block;width:22px;height:1.5px;background:currentColor;position:relative}
+.h-burger span::before,.h-burger span::after{content:"";position:absolute;left:0;width:22px;height:1.5px;background:currentColor;transition:transform .25s}
+.h-burger span::before{top:-7px}.h-burger span::after{top:7px}
+.header.open .h-burger span{background:transparent}
+.header.open .h-burger span::before{transform:translateY(7px) rotate(45deg)}
+.header.open .h-burger span::after{transform:translateY(-7px) rotate(-45deg)}
+.h-nav{background:var(--white)}
+.h-nav-inner{display:flex;justify-content:center;align-items:center;gap:21px;height:55px}
+.h-nav a{position:relative}
+.h-nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.h-nav a:hover::after{transform:scaleX(1)}
+.h-nav-lang{display:none}
+section[id]{scroll-margin-top:200px}
+@media (max-width:900px){section[id]{scroll-margin-top:72px}}
+
+/* hero */
+.hero-shell{padding:40px var(--gutter) 0}
+.hero{position:relative;min-height:680px;display:flex;align-items:flex-end;color:var(--white);overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url("https://petragroup.ge/storage/361/petra-resort-home-hero_result.webp") center/cover no-repeat;transform:scale(1.04)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,19,50,.88) 0%,rgba(3,19,50,.55) 45%,rgba(3,19,50,.05) 100%),linear-gradient(0deg,rgba(3,19,50,.7) 0%,rgba(3,19,50,0) 40%)}
+.hero-content{position:relative;z-index:2;padding:100px 0 70px;max-width:760px}
+.eyebrow{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;display:block}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.6vw,60px);line-height:1.22;margin-bottom:24px}
+.hero h1 .h1-line{display:block;white-space:nowrap}
+.hero-sub{font-family:var(--serif);font-size:clamp(17px,1.6vw,21px);color:rgba(244,240,237,.9);max-width:560px;margin-bottom:40px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* sections */
+section{padding:110px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;padding-bottom:26px;margin-bottom:56px;border-bottom:1px solid var(--sand)}
+h2{font-family:var(--serif);font-weight:300;font-size:clamp(28px,3vw,40px);line-height:1.25}
+.lead{font-family:var(--serif);font-size:19px;line-height:1.8}
+.muted{color:rgba(3,19,50,.72)}
+
+/* intro */
+.intro-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:80px;align-items:start}
+.intro-grid .lead{border-left:2px solid var(--gold);padding-left:32px}
+
+/* formats */
+.formats{background:var(--white)}
+.fmt-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--sand);border-left:1px solid var(--sand)}
+.fmt{padding:40px 32px 46px;border-right:1px solid var(--sand);border-bottom:1px solid var(--sand);transition:background .3s}
+.fmt:hover{background:var(--cream)}
+.fmt-num{font-family:var(--serif);font-size:14px;color:var(--gold-dark);margin-bottom:46px;display:block}
+.fmt h3{font-family:var(--serif);font-weight:400;font-size:22px;margin-bottom:14px}
+.fmt p{font-size:15px;color:rgba(3,19,50,.75)}
+.fmt.featured{background:var(--navy);color:var(--white)}
+.fmt.featured p{color:rgba(255,255,255,.75)}
+.fmt.featured .fmt-num{color:var(--gold)}
+.fmt.featured:hover{background:var(--navy-2)}
+
+/* terms band */
+.terms{background:var(--navy) url("https://petragroup.ge/images/footer-bg.svg") right center/auto 120% no-repeat;color:var(--white)}
+.terms .sec-head{border-bottom-color:rgba(255,255,255,.18)}
+.terms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.term{padding:10px 40px 10px 0;border-right:1px solid rgba(255,255,255,.18)}
+.term + .term{padding-left:40px}
+.term:last-child{border-right:0}
+.terms .confirm-tag{color:var(--gold);background:rgba(217,170,110,.1)}
+.term-val{font-family:var(--serif);font-weight:300;font-size:clamp(30px,3vw,42px);white-space:nowrap;line-height:1.1;color:var(--gold);margin-bottom:12px}
+.term-val .ph{color:var(--gold);background:rgba(217,170,110,.12)}
+.term p{color:rgba(255,255,255,.8);font-size:15px}
+.terms-note{margin-top:54px;font-family:var(--serif);color:rgba(255,255,255,.7);font-size:15px}
+
+/* schedule */
+.sched-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.sched-img{aspect-ratio:4/5;background:url("https://petragroup.ge/storage/340/close-up-of-black-man-receiving-room-cardkey-while-2026-01-06-10-26-48-utc-(1)_result.webp") center/cover;border-radius:2px}
+.check-list{list-style:none;margin:34px 0 40px}
+.check-list li{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--sand);font-family:var(--serif);font-size:18px}
+.check-list li span{color:var(--gold-dark);font-size:14px;min-width:26px;padding-top:4px}
+
+/* projects */
+.project{display:grid;grid-template-columns:1.15fr 1fr;gap:0;background:var(--white);margin-bottom:40px}
+.project.rev{grid-template-columns:1fr 1.15fr}
+.project.rev .project-img{order:2}
+.project-img{min-height:520px;background-size:cover;background-position:center}
+.project-body{padding:64px 60px;display:flex;flex-direction:column;justify-content:center}
+.project-body h3{font-family:var(--serif);font-weight:300;font-size:clamp(26px,2.6vw,34px);line-height:1.25;margin-bottom:22px}
+.project-body p{color:rgba(3,19,50,.78);margin-bottom:18px}
+.facts{display:flex;gap:34px;flex-wrap:wrap;margin:10px 0 34px;padding:22px 0;border-top:1px solid var(--sand);border-bottom:1px solid var(--sand)}
+.facts div{font-size:13px;color:rgba(3,19,50,.6)}
+.facts b{display:block;font-family:var(--serif);font-weight:400;font-size:20px;color:var(--navy)}
+.inline-link{color:var(--brown);border-bottom:1px solid var(--gold)}
+.inline-link:hover{color:var(--navy)}
+.project-logo{height:46px;width:auto;margin-bottom:26px;filter:brightness(0) saturate(100%) invert(8%) sepia(37%) saturate(4000%) hue-rotate(210deg)}
+
+/* mortgage + compare */
+.compare-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
+.mortgage-card{background:var(--white);padding:46px 42px;border-top:3px solid var(--gold)}
+.mortgage-card h2{font-size:clamp(26px,2.4vw,32px);margin-bottom:20px}
+.mortgage-card p{color:rgba(3,19,50,.78);margin-bottom:28px}
+.compare-wrap>*,.faq-grid>*,.contact-grid>*,.intro-grid>*,.sched-grid>*{min-width:0}
+.table-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:560px;background:var(--white)}
+th,td{text-align:left;padding:20px 24px;border-bottom:1px solid var(--sand);font-size:15px}
+thead th{font-family:var(--serif);font-weight:400;font-size:18px;background:var(--navy);color:var(--white)}
+thead th:nth-child(2){background:var(--gold);color:var(--navy)}
+tbody td:first-child{color:rgba(3,19,50,.6);font-size:14px}
+tbody td:nth-child(2){font-weight:500;background:rgba(217,170,110,.08)}
+.compare-title{margin-bottom:30px}
+
+/* steps */
+.steps{background:var(--white)}
+.steps-grid{display:grid;grid-template-columns:repeat(6,1fr);position:relative}
+.steps-grid::before{content:"";position:absolute;left:0;right:0;top:27px;height:1px;background:var(--sand)}
+.step{position:relative;padding-right:22px}
+.step-dot{width:56px;height:56px;border-radius:50%;background:var(--cream);border:1px solid var(--sand);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;color:var(--gold-dark);margin-bottom:26px;position:relative;z-index:1;transition:background .3s,color .3s}
+.step:hover .step-dot{background:var(--navy);color:var(--gold);border-color:var(--navy)}
+.step h3{font-family:var(--serif);font-weight:400;font-size:18px;margin-bottom:8px;line-height:1.35}
+.step p{font-size:14px;color:rgba(3,19,50,.7)}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:80px}
+.faq-grid aside p{margin-top:20px}
+details{border-bottom:1px solid var(--sand)}
+details:first-child{border-top:1px solid var(--sand)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;font-family:var(--serif);font-size:19px;line-height:1.45}
+summary::-webkit-details-marker{display:none}
+summary .plus{flex:0 0 34px;height:34px;border-radius:50%;border:1px solid var(--sand);position:relative;transition:background .25s,transform .3s}
+summary .plus::before,summary .plus::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1px;background:var(--navy);transform:translate(-50%,-50%)}
+summary .plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s}
+details[open] summary .plus{background:var(--gold);border-color:var(--gold)}
+details[open] summary .plus::after{transform:translate(-50%,-50%) rotate(0)}
+.faq-a{padding:0 60px 28px 0;color:rgba(3,19,50,.78)}
+
+/* contact */
+.contact{position:relative;color:var(--white);overflow:hidden}
+.contact-bg{position:absolute;inset:0;background:url("https://petragroup.ge/storage/344/1.1_result.webp") center 40%/cover}
+.contact::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,19,50,.95) 0%,rgba(3,19,50,.82) 55%,rgba(3,19,50,.6) 100%)}
+.contact .wrap{position:relative;z-index:2}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.contact h2{font-size:clamp(30px,3.4vw,46px);margin-bottom:20px}
+.contact .lead{color:rgba(244,240,237,.85);font-size:18px}
+.contact-direct{margin-top:40px;display:flex;flex-direction:column;gap:8px;font-size:14px;color:rgba(255,255,255,.65)}
+.contact-direct a{font-family:var(--serif);font-size:24px;color:var(--white)}
+.form{background:var(--cream);color:var(--navy);padding:46px 42px;border-radius:2px}
+.form h3{font-family:var(--serif);font-weight:400;font-size:22px;margin-bottom:26px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:rgba(3,19,50,.6);margin-bottom:8px}
+.field input,.field select{width:100%;font-family:var(--sans);font-size:15px;color:var(--navy);background:transparent;border:0;border-bottom:1px solid var(--sand);padding:10px 0;outline:none;border-radius:0;transition:border-color .2s}
+.field input:focus,.field select:focus{border-bottom-color:var(--gold-dark)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form .btn{width:100%;margin-top:14px}
+.form small{display:block;margin-top:16px;font-size:12px;color:rgba(3,19,50,.55)}
+.form-ok{display:none;text-align:center;padding:40px 0}
+.form-ok h3{margin-bottom:10px}
+.form.sent .form-fields{display:none}
+.form.sent .form-ok{display:block}
+
+/* footer */
+.footer{background:var(--navy);color:rgba(255,255,255,.7);padding:80px 0 34px;font-size:14px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.14)}
+.footer img{height:52px;width:auto;margin-bottom:22px}
+.footer h4{font-family:var(--serif);font-weight:400;font-size:16px;color:var(--white);margin-bottom:18px}
+.footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer a:hover{color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:12px;color:rgba(255,255,255,.45)}
+
+/* floating */
+.float{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;flex-direction:column;gap:10px}
+.float a{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--navy);box-shadow:0 12px 30px rgba(3,19,50,.28);transition:transform .25s}
+.float a:hover{transform:translateY(-2px)}
+.float a.wa{background:var(--navy);color:var(--white)}
+.float svg{width:22px;height:22px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* responsive */
+@media (max-width:1100px){
+  .h-right{gap:18px}
+  .h-left .h-label{display:none}
+  .h-toggle .ico-search{display:block}
+  .header-inner{height:110px}
+  .fmt-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-grid{grid-template-columns:repeat(3,1fr);row-gap:44px}
+  .steps-grid::before{display:none}
+}
+@media (max-width:900px){
+  section{padding:80px 0}
+  .intro-grid,.sched-grid,.compare-wrap,.faq-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .project,.project.rev{grid-template-columns:1fr}
+  .project.rev .project-img{order:0}
+  .project-img{min-height:320px}
+  .project-body{padding:44px 32px}
+  .terms-grid{grid-template-columns:1fr}
+  .term,.term + .term{padding:26px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.18)}
+  .term:last-child{border-bottom:0}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .sched-img{aspect-ratio:16/10}
+  .header-inner{height:72px}
+  .h-lang,.h-star,.h-callback{display:none}
+  .h-burger{display:flex}
+  .h-logo{flex:0 1 260px}
+  .h-nav{display:none}
+  .header.open .h-nav{display:block;border-top:1px solid var(--sand)}
+  .header.open .h-nav-inner{flex-direction:column;align-items:flex-start;height:auto;gap:0;padding:12px var(--gutter) 24px}
+  .header.open .h-nav-inner a{padding:12px 0;width:100%;border-bottom:1px solid var(--cream)}
+  .header.open .h-nav-inner .h-nav-star{display:none}
+  .header.open .h-nav-lang{display:flex;gap:18px;padding-top:16px}
+  .hero{min-height:0}
+  .hero-content{padding:70px 0 50px}
+}
+@media (max-width:600px){
+  .wrap{padding:0 20px}
+  .header-inner{height:64px}
+  .h-logo{flex:0 1 190px}
+  .hero-shell{padding-top:16px}
+  .hero .wrap{padding:0 16px}
+  .hero-content{padding:56px 0 40px}
+  .hero h1{font-size:clamp(18px,5.9vw,34px)}
+  .hero-actions .btn{width:100%}
+  .sec-head{flex-direction:column;align-items:flex-start;margin-bottom:40px}
+  .fmt-grid{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr 1fr}
+  .field-row{grid-template-columns:1fr;gap:0}
+  .form{padding:34px 24px}
+  .faq-a{padding-right:0}
+  summary{font-size:17px}
+  .footer-grid{grid-template-columns:1fr}
+  .intro-grid .lead{padding-left:20px}
+  .ph{white-space:normal}
+  .term-val{white-space:normal}
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="header-top">
+    <div class="header-inner">
+      <div class="h-left">
+        <div class="h-drop">
+          <button class="h-toggle" type="button" aria-haspopup="menu" aria-label="Choose an apartment">
+            <svg class="ico-search" viewBox="0 0 23 23" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.3349 16.1686C19.5337 14.5257 20.2453 12.5006 20.2453 10.3084C20.2453 4.82076 15.7988 0.374268 10.3111 0.374268C4.82345 0.374268 0.376953 4.82076 0.376953 10.3084C0.376953 15.7961 4.82345 20.2426 10.3111 20.2426C12.5033 20.2426 14.5284 19.5357 16.1713 18.3322L20.0122 22.1778C20.6092 22.7748 21.5787 22.7748 22.1757 22.1778C22.7727 21.5808 22.7727 20.6113 22.1757 20.0143L18.3349 16.1686ZM6.85725 7.08061C6.22203 7.08061 5.711 7.59165 5.711 8.22686C5.711 8.86207 6.22203 9.37311 6.85725 9.37311H11.1662C11.8014 9.37311 12.3124 8.86207 12.3124 8.22686C12.3124 7.59165 11.8014 7.08061 11.1662 7.08061H6.85725ZM6.85724 11.1438C6.22203 11.1438 5.71099 11.6549 5.71099 12.2901C5.71099 12.9253 6.22203 13.4363 6.85724 13.4363H13.7347C14.37 13.4363 14.881 12.9253 14.881 12.2901C14.881 11.6549 14.37 11.1438 13.7347 11.1438H6.85724Z"/></svg>
+            <span class="h-label">Choose an apartment</span>
+            <svg class="chev" viewBox="0 0 13 9" fill="currentColor" aria-hidden="true"><path d="M1.016 0.663L6.452 2.965L11.887 0.663H12.206L6.452 8.837L0.698 0.663Z"/></svg>
+          </button>
+          <nav class="h-list" aria-label="Choose an apartment">
+            <a href="https://petragroup.ge/en/petra/blocks">Petra Sea Resort</a>
+            <a href="https://petragroup.ge/en/petra-ski-resort/blocks">Petra Ski Resort</a>
+          </nav>
+        </div>
+      </div>
+      <a href="https://petragroup.ge/en" class="h-logo" aria-label="Home"><img src="https://petragroup.ge/storage/UFLld6ojypOFohj71ZZlrlPjw4kIK6-metaU2VhLUxvZ28uc3Zn-.svg" width="622" height="57" alt="Petra Sea Resort"></a>
+      <div class="h-right">
+        <div class="h-drop h-lang">
+          <button class="h-toggle" type="button" aria-haspopup="menu">ENG <svg class="chev" viewBox="0 0 13 9" fill="currentColor" aria-hidden="true"><path d="M1.016 0.663L6.452 2.965L11.887 0.663H12.206L6.452 8.837L0.698 0.663Z"/></svg></button>
+          <nav class="h-list"><a href="../">GEO</a><a href="https://petragroup.ge/ru/petra">RUS</a></nav>
+        </div>
+        <svg class="h-star" viewBox="0 0 22 21" fill="currentColor" aria-hidden="true"><path d="M12.9283 9.60033L21.5 10.5L12.9283 11.3997L17.3138 16.8138L11.8996 12.4282L10.9999 21L10.1002 12.4283L4.68622 16.8137L9.07172 11.3997L0.5 10.5L9.07177 9.6003L4.68627 4.18622L10.1002 8.57165L10.9999 0L11.8996 8.57182L17.3138 4.18623L12.9283 9.60033Z"/></svg>
+        <a href="#contact" class="h-callback">
+          <svg viewBox="0 0 22 21" fill="#051535"><path d="M7.26318 1.00987C6.94737 0.247008 6.11479 -0.159029 5.31912 0.0583444L1.70991 1.04268C0.996267 1.23954 0.5 1.88756 0.5 2.62581C0.499999 12.7726 8.72737 21 18.8742 21C19.6124 21 20.2605 20.5037 20.4573 19.7901L21.4417 16.1809C21.659 15.3852 21.253 14.5526 20.4901 14.2368L16.5528 12.5963C15.8843 12.3174 15.1091 12.5101 14.6539 13.072L12.9969 15.094C10.1095 13.7283 7.77175 11.3905 6.40599 8.50309L8.42797 6.85023C8.98986 6.39088 9.18263 5.61982 8.90373 4.95129L7.26318 1.01397L7.26318 1.00987Z"/></svg>
+          Call Back
+        </a>
+        <button class="h-burger" type="button" aria-label="Menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </div>
+  <nav class="h-nav" aria-label="Main menu">
+    <div class="h-nav-inner">
+      <a href="https://petragroup.ge/en/projects">Projects</a>
+      <a href="https://petragroup.ge/en/about">About Us</a>
+      <a href="https://petragroup.ge/en/georgia">Georgia</a>
+      <a href="https://petragroup.ge/en/news">News</a>
+      <a href="https://petragroup.ge/en/contact">Contact</a>
+      <svg class="h-star h-nav-star" viewBox="0 0 22 21" fill="currentColor" aria-hidden="true"><path d="M12.9283 9.60033L21.5 10.5L12.9283 11.3997L17.3138 16.8138L11.8996 12.4282L10.9999 21L10.1002 12.4283L4.68622 16.8137L9.07172 11.3997L0.5 10.5L9.07177 9.6003L4.68627 4.18622L10.1002 8.57165L10.9999 0L11.8996 8.57182L17.3138 4.18623L12.9283 9.60033Z"/></svg>
+      <a href="https://petragroup.ge/en/petra/apartments">Apartments</a>
+      <a href="https://petragroup.ge/en/petra">LIVE</a>
+      <div class="h-nav-lang"><a href="../">GEO</a><a href="https://petragroup.ge/ru/petra">RUS</a></div>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero-shell">
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap" style="position:relative;z-index:2;width:100%">
+    <div class="hero-content">
+      <span class="eyebrow">Payment plan · Mortgage · Batumi</span>
+      <h1><span class="h1-line">Off-Plan Apartments</span> in Batumi with a Payment Plan</h1>
+      <p class="hero-sub">An in-house payment plan at Petra Sea Resort, scheduled around your budget.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-gold">Book a Private Consultation</a>
+        <a href="tel:+995577251251" class="btn btn-line">+995 577 25 12 51</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- INTRO -->
+<section>
+  <div class="wrap intro-grid reveal">
+    <h2>Ownership, on your terms</h2>
+    <p class="lead">Petra Group offers off-plan apartments in Batumi and across Georgia's resort destinations with the same care we put into every resort we build. Buy with an in-house payment plan, a mortgage, a combined plan or a single payment. We set the schedule together with every buyer.</p>
+  </div>
+</section>
+
+<!-- FORMATS -->
+<section class="formats" id="formats">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Payment Options</h2>
+      <a href="#contact" class="btn btn-gold">Book a Call</a>
+    </div>
+    <div class="fmt-grid reveal">
+      <article class="fmt featured">
+        <span class="fmt-num">01</span>
+        <h3>In-House Payment Plan</h3>
+        <p>Agreed directly with the developer, with no bank involved. You pay for the apartment in stages as construction progresses, on a schedule that suits you.</p>
+      </article>
+      <article class="fmt">
+        <span class="fmt-num">02</span>
+        <h3>Mortgage</h3>
+        <p>Financing through <span class="ph">[partner bank]</span>, for buyers who prefer to spread the investment over a longer term.</p>
+      </article>
+      <article class="fmt">
+        <span class="fmt-num">03</span>
+        <h3>Combined Plan</h3>
+        <p>A down payment, an in-house plan, and the balance settled at handover or through a mortgage. Flexibility with predictable costs.</p>
+      </article>
+      <article class="fmt">
+        <span class="fmt-num">04</span>
+        <h3>Full Payment</h3>
+        <p>The fastest route to ownership, for buyers who want to complete in a single step.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TERMS (conditional) -->
+<section class="terms">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <span class="confirm-tag">Shown only once confirmed by the client</span>
+        <h2>Payment Plan Key Terms</h2>
+      </div>
+    </div>
+    <div class="terms-grid reveal">
+      <div class="term">
+        <div class="term-val">From <span class="ph">[X]%</span></div>
+        <p>Down payment</p>
+      </div>
+      <div class="term">
+        <div class="term-val">Up to <span class="ph">[X]</span> months</div>
+        <p>Plan term</p>
+      </div>
+      <div class="term">
+        <div class="term-val">Tailored</div>
+        <p>Payment schedule</p>
+      </div>
+    </div>
+    <p class="terms-note reveal">Exact terms depend on the project, block and apartment.</p>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section>
+  <div class="wrap sched-grid">
+    <div class="sched-img reveal" role="img" aria-label="Petra Sea Resort"></div>
+    <div class="reveal">
+      <h2>How Your Payment Schedule Is Set</h2>
+      <p class="muted" style="margin-top:20px">Every in-house plan is tailored. During your consultation, you agree the following with our sales team:</p>
+      <ul class="check-list">
+        <li><span>01</span>Your down payment</li>
+        <li><span>02</span>Payment term and frequency</li>
+        <li><span>03</span>How the schedule aligns with handover</li>
+      </ul>
+      <a href="#contact" class="btn btn-gold">Plan My Schedule</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Off-Plan Apartments at Petra Sea Resort with a Payment Plan</h2>
+    </div>
+
+    <article class="project reveal">
+      <div class="project-img" style="background-image:url('https://petragroup.ge/storage/361/petra-resort-home-hero_result.webp');background-position:30% 80%"></div>
+      <div class="project-body">
+        <img class="project-logo" src="https://petragroup.ge/storage/SV7gpYTyL90lsZVkyx0kRoGsBcL3eu-metaTG9nby1QZXRyYS5zdmc=-.svg" alt="Petra Sea Resort">
+        <h3>Sea, mountains and subtropical forest in one place</h3>
+        <p>A 20-hectare resort in Tsikhisdziri, 20 km from Batumi, where the sea, mountains and subtropical forest meet. Managed by Valor Hospitality Partners to international standards.</p>
+        <div class="facts">
+          <div><b>20 ha</b>Site</div>
+          <div><b>Tsikhisdziri</b>Location</div>
+          <div><b>Valor</b>Operator</div>
+        </div>
+        <p>Browse the <a class="inline-link" href="https://petragroup.ge/en/petra/apartments">off-plan apartments</a> at Petra Sea Resort and choose yours.</p>
+      </div>
+    </article>
+
+    <article class="project rev reveal">
+      <div class="project-img" style="background-image:url('https://petragroup.ge/storage/202/Cover-Pullman-2.webp')"></div>
+      <div class="project-body">
+        <img class="project-logo" src="https://petragroup.ge/storage/XaGINOdfkxxQ1xgzpnOsOQ0ukZa2a9-metacHVsbG1hbi1sb2dvICgxKS5zdmc=-.svg" alt="Pullman Living Batumi">
+        <h3>Pullman Living Batumi</h3>
+        <p>Accor-branded residences within Petra Sea Resort, right on the waterfront. <a class="inline-link" href="https://petragroup.ge/en/pullman">Pullman Living Batumi residences</a> are delivered turnkey to Accor standards.</p>
+        <div class="facts">
+          <div><b>Turnkey</b>Handover</div>
+          <div><b>Accor</b>Standard</div>
+          <div><b>Dec 2030</b>Completion</div>
+        </div>
+        <p>The in-house payment plan also covers Pullman apartments <span class="ph">[subject to client confirmation]</span>.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- MORTGAGE + COMPARE -->
+<section id="compare" style="padding-top:20px">
+  <div class="wrap compare-wrap">
+    <div class="mortgage-card reveal">
+      <h2>Buying with a Mortgage</h2>
+      <p>Apartments can be purchased through the <span class="ph">[partner bank]</span> mortgage programme. Mortgages currently apply to <span class="ph">[blocks/projects]</span>.</p>
+      <a href="#contact" class="btn btn-gold">Get Mortgage Details</a>
+    </div>
+    <div class="reveal">
+      <h2 class="compare-title">Payment Plan or Mortgage?</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th></th><th>In-House Payment Plan</th><th>Mortgage</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Bank involvement</td><td>Not required</td><td>Required</td></tr>
+            <tr><td>Credit check</td><td>Not required</td><td>At the bank's discretion</td></tr>
+            <tr><td>Paperwork</td><td>Minimal</td><td>As required by the bank</td></tr>
+            <tr><td>Schedule flexibility</td><td>Tailored</td><td>Bank terms</td></tr>
+            <tr><td>Decision time</td><td>Fast</td><td>Subject to bank review</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="steps">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>How to Buy</h2>
+    </div>
+    <div class="steps-grid reveal">
+      <div class="step"><div class="step-dot">1</div><h3>Choose</h3><p>Explore the projects and pick your apartment.</p></div>
+      <div class="step"><div class="step-dot">2</div><h3>Private Consultation</h3><p>Our sales team walks you through the project and the purchase terms.</p></div>
+      <div class="step"><div class="step-dot">3</div><h3>Payment Schedule</h3><p>Together we set your down payment and payment dates.</p></div>
+      <div class="step"><div class="step-dot">4</div><h3>Reservation and Contract</h3></div>
+      <div class="step"><div class="step-dot">5</div><h3>Down Payment</h3></div>
+      <div class="step"><div class="step-dot">6</div><h3>Scheduled Payments</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <aside class="reveal">
+      <h2>Frequently Asked Questions</h2>
+      <p class="muted">Can't find your answer? Our sales team is here to help.</p>
+      <a href="#contact" class="btn btn-gold" style="margin-top:28px">Contact Us</a>
+    </aside>
+    <div class="reveal">
+      <details open>
+        <summary>Can I buy an apartment at Petra Group developments with an in-house payment plan?<span class="plus"></span></summary>
+        <div class="faq-a">Yes. With an in-house plan, you pay the developer directly on an agreed schedule, with no bank involved.</div>
+      </details>
+      <details>
+        <summary>How long can a Petra Group payment plan run?<span class="plus"></span></summary>
+        <div class="faq-a">The term is set individually, based on the project, the block and the apartment's handover date. <span class="ph">[If confirmed: the maximum term is X months.]</span></div>
+      </details>
+      <details>
+        <summary>How is the down payment set for Petra Group apartments?<span class="plus"></span></summary>
+        <div class="faq-a">The down payment depends on your budget and the apartment you choose. <span class="ph">[If confirmed: the minimum down payment is X%.]</span></div>
+      </details>
+      <details>
+        <summary>Can I buy a Petra Group apartment with a mortgage?<span class="plus"></span></summary>
+        <div class="faq-a">Yes, through the <span class="ph">[partner bank]</span> mortgage programme. Mortgages currently apply to <span class="ph">[blocks/projects]</span>.</div>
+      </details>
+      <details>
+        <summary>When will Petra Sea Resort be completed?<span class="plus"></span></summary>
+        <div class="faq-a">Construction is phased: Block C in June 2027, Block B in December 2027, Blocks A, D and K in December 2028, and Pullman Living Batumi in December 2030.</div>
+      </details>
+      <details>
+        <summary>Can I repay the plan early?<span class="plus"></span></summary>
+        <div class="faq-a"><span class="ph">[Pending the client's answer.]</span></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-bg"></div>
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Private consultation</span>
+      <h2>Book a Private Consultation</h2>
+      <p class="lead">Leave your details and our sales team will be in touch to build your payment schedule.</p>
+      <div class="contact-direct">
+        Or call us directly
+        <a href="tel:+995577251251">+995 577 25 12 51</a>
+      </div>
+    </div>
+    <form class="form reveal" id="leadForm" novalidate>
+      <div class="form-fields">
+        <h3>Book a Consultation</h3>
+        <div class="field-row">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" autocomplete="tel" required></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="f-project">Project</label>
+            <select id="f-project"><option>Petra Sea Resort</option><option>Pullman Living Batumi</option><option>Not decided yet</option></select>
+          </div>
+          <div class="field"><label for="f-pay">Payment option</label>
+            <select id="f-pay"><option>In-house payment plan</option><option>Mortgage</option><option>Combined plan</option><option>Full payment</option></select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-gold">Book a Consultation</button>
+        <small>By submitting, you agree to our Privacy Policy.</small>
+      </div>
+      <div class="form-ok">
+        <h3>Thank you!</h3>
+        <p class="muted">Our sales team will be in touch shortly.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="https://petragroup.ge/images/footer-logo.svg" alt="Petra Group">
+        <p>Resort real estate in Georgia, developed with global hospitality brands.</p>
+      </div>
+      <div>
+        <h4>Projects</h4>
+        <ul><li><a href="https://petragroup.ge/en/petra/apartments">Petra Sea Resort</a></li><li><a href="https://petragroup.ge/en/pullman">Pullman Living Batumi</a></li><li><a href="https://petragroup.ge/en/">Swissôtel Gudauri</a></li></ul>
+      </div>
+      <div>
+        <h4>Buying</h4>
+        <ul><li><a href="#formats">Payment options</a></li><li><a href="#compare">Payment plan or mortgage</a></li><li><a href="#faq">FAQ</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li><a href="tel:+995577251251">+995 577 25 12 51</a></li><li><a href="#contact">Book a consultation</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Petra Group</span><span>Mockup · 10xSEO</span></div>
+  </div>
+</footer>
+
+<div class="float">
+  <a href="https://wa.me/995577251251" class="wa" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM12 0a11.9 11.9 0 0 0-10.3 17.9L0 24l6.3-1.6A11.9 11.9 0 1 0 12 0z"/></svg>
+  </a>
+  <a href="tel:+995577251251" aria-label="Call">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+  </a>
+</div>
+
+<script>
+const header=document.getElementById('header');
+const burger=header.querySelector('.h-burger');
+burger.addEventListener('click',()=>{const o=header.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+header.querySelectorAll('.h-nav a').forEach(a=>a.addEventListener('click',()=>{header.classList.remove('open');burger.setAttribute('aria-expanded',false)}));
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+document.getElementById('leadForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const f=e.currentTarget;
+  const name=f.querySelector('#f-name'),phone=f.querySelector('#f-phone');
+  [name,phone].forEach(i=>i.style.borderBottomColor=i.value.trim()?'':'#c0392b');
+  if(name.value.trim()&&phone.value.trim()) f.classList.add('sent');
+});
+</script>
+</body>
+</html>
